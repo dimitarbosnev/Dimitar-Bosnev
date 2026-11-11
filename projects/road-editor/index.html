@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AVES Road Editor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
+
+    <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../../assets/css/aos.css">
+
+    <link rel="stylesheet" href="../../assets/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../../assets/css/icomoon.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">Dimitar</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="../../index.html#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="../../index.html#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="../../index.html#background-section" class="nav-link"><span>Background</span></a></li>
+            <li class="nav-item"><a href="../../index.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+            <li class="nav-item"><a href="../../index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="../../index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-wrap js-fullheight" style="background-image: url(RoadEditor.jpg);" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+          <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+            <h1 class="mb-3 bread">AVES Road Editor</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="../../index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="../../index.html#projects-section">Projects <i class="ion-ios-arrow-forward"></i></a></span> <span>Road Editor <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">What is the Road Editor?</h2>
+            <p>
+              The Road Editor is a custom Editor Mode for Unreal Engine that lets users create, delete and reshape
+              road networks directly inside the editor. I built it as part of my work at
+              AVES Reality, a start-up whose AVES Launcher procedurally generates digital twins of real places
+              from satellite imagery and other geospatial data. These environments are used for developing
+              driver-assistance and autonomous-driving systems, simulations and training, and are exported into
+              Unreal Engine through the company's AVES Bridge plugin.
+            </p>
+            <figure class="re-figure">
+              <img src="launcher-and-unreal.jpg" alt="The AVES Launcher next to Unreal Engine running the AVES Bridge plugin" class="img-fluid">
+              <figcaption>The AVES Launcher (left) and the generated environment in Unreal Engine (right).</figcaption>
+            </figure>
+            <p>
+              The roads in those environments come from OpenDRIVE files. Before the Road Editor, fixing a road
+              meant editing the file in external software (RoadRunner), then regenerating and reimporting the
+              environment. That added licensing costs and slowed every iteration. With the Road Editor, users edit
+              roads in Unreal and see the result immediately.
+            </p>
+            <p>
+              The first version shipped as part of the AVES Bridge plugin's June 2026 release and is set to become part
+              of the company's digital twin workflow.
+            </p>
+
+            <h2 class="mb-3 mt-5">From satellite data to Unreal</h2>
+            <p>
+              Every environment starts in the AVES Launcher: pick the map tiles you need, generate the model, and
+              export it straight into an open Unreal Engine project.
+            </p>
+            <div class="row">
+              <figure class="re-figure col-md-6">
+                <img src="launcher-select-tiles.jpg" alt="Selecting map tiles in the AVES Launcher" class="img-fluid">
+                <figcaption>1. Select one or more square-kilometre tiles.</figcaption>
+              </figure>
+              <figure class="re-figure col-md-6">
+                <img src="launcher-generate.jpg" alt="The model generation dialog in the AVES Launcher" class="img-fluid">
+                <figcaption>2. Generate the model.</figcaption>
+              </figure>
+            </div>
+            <figure class="re-figure">
+              <img src="unreal-imported.jpg" alt="A generated environment imported into Unreal Engine" class="img-fluid">
+              <figcaption>3. The generated tiles, imported into Unreal Engine and ready to edit.</figcaption>
+            </figure>
+
+            <h2 class="mb-3 mt-5">How it works</h2>
+            <div class="row">
+              <figure class="re-figure col-md-6">
+                <img src="step1-editor-mode.jpg" alt="An imported town with the AVES Road Editor mode active" class="img-fluid">
+                <figcaption>Switch to the AVES Road Editor mode and start editing right away.</figcaption>
+              </figure>
+              <figure class="re-figure col-md-6">
+                <img src="step2-select-road.jpg" alt="A road highlighted after being selected" class="img-fluid">
+                <figcaption>Click a road to select and highlight it.</figcaption>
+              </figure>
+              <figure class="re-figure col-md-6">
+                <img src="step3-move-control-point.jpg" alt="Dragging a control point to reshape a road" class="img-fluid">
+                <figcaption>Drag the control points to reshape the road.</figcaption>
+              </figure>
+              <figure class="re-figure col-md-6">
+                <img src="step4-terrain-adapted.jpg" alt="The landscape adapted and repainted to fit the edited road" class="img-fluid">
+                <figcaption>On release, the landscape adapts and is repainted to fit the new road.</figcaption>
+              </figure>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-md-7">
+                <p>
+                  Right-clicking opens a context menu for creating and deleting roads and control points. The
+                  network can also be imported from and exported back to OpenDRIVE, so it stays compatible with
+                  external road design tools and simulators.
+                </p>
+              </div>
+              <figure class="re-figure col-md-5">
+                <img src="context-menu.png" alt="The Road Editor context menu" class="img-fluid">
+              </figure>
+            </div>
+
+            <h2 class="mb-3 mt-5">Building on an undocumented framework</h2>
+            <p>
+              One requirement was compatibility with every Unreal Engine version from 4.26 up to 5.5. Unreal's modern
+              Editor Mode framework (<code>UEdMode</code>) only exists in Unreal Engine 5, so the editor is built on the
+              legacy <code>FEdMode</code> framework, which has little to no documentation or examples. I worked out
+              how to use it by reading Unreal's own source code, using the Landscape and Geometry editors as
+              references.
+            </p>
+            <p>
+              The editor is split into four parts: the UI toolkit, the editing tools, a Road Net actor that holds the
+              road network data and meshes, and a global action system for undo and redo.
+            </p>
+            <figure class="re-figure">
+              <img src="diagram-architecture.png" alt="Road Editor architecture diagram" class="img-fluid re-diagram">
+              <figcaption>Road Editor architecture.</figcaption>
+            </figure>
+
+            <h2 class="mb-3 mt-5">Road network data structure</h2>
+            <p>
+              The road network follows the ASAM OpenDRIVE standard. Each road has its own reference line and
+              elevation profile and owns its lane sections and lanes, while junctions connect lanes across different
+              roads.
+            </p>
+            <figure class="re-figure">
+              <img src="diagram-opendrive.png" alt="Simplified ASAM OpenDRIVE hierarchy" class="img-fluid re-diagram">
+              <figcaption>A simplified view of the ASAM OpenDRIVE hierarchy.</figcaption>
+            </figure>
+            <p>
+              I designed the backing data structure for fast insertion, deletion and traversal while staying
+              cache-friendly. Each element type lives in its own pool. Elements are accessed through an ID that
+              combines an index into the pool with a generation counter, which detects stale references to
+              deleted elements. This makes the network simple to serialize and copy. A thin proxy layer on top keeps
+              the rest of the code independent of the underlying storage.
+            </p>
+            <figure class="re-figure">
+              <img src="diagram-data-structure.png" alt="Diagram of the road network pools and proxy classes" class="img-fluid re-diagram">
+              <figcaption>Element pools in the RoadNet, with proxies on top.</figcaption>
+            </figure>
+
+            <h2 class="mb-3 mt-5">Keeping editing smooth</h2>
+            <div class="row">
+              <div class="col-md-7">
+                <p>
+                  Roads were originally generated as Unreal static meshes, which took over 100&nbsp;ms for a
+                  medium-sized road and up to a second for large ones. Because a road is regenerated every frame
+                  while you drag a control point, this capped editing at around 5&nbsp;fps.
+                </p>
+                <p>
+                  I switched to Unreal's Procedural Mesh Component, which meant writing a conversion step from
+                  AVES's indexed mesh format to per-material vertex and index buffers. Generation dropped to
+                  40&nbsp;ms, and to 20&nbsp;ms by skipping collision generation until the control point is released.
+                </p>
+              </div>
+              <figure class="re-figure col-md-5">
+                <img src="diagram-mesh-conversion.png" alt="Flowchart of the mesh interface to procedural mesh section conversion" class="img-fluid re-diagram">
+                <figcaption>Converting AVES meshes to procedural mesh sections.</figcaption>
+              </figure>
+            </div>
+            <p>
+              Terrain adaptation deforms and repaints the landscape to fit the road. The first version took about
+              800&nbsp;ms. Updating only the affected regions brought that down to 130&nbsp;ms, but caused terrain edits
+              to overwrite each other, so I moved the heavy work to a background thread instead and only apply the
+              result on the main thread. The changes are written to a non-destructive Landscape Edit Layer, so the
+              original imported terrain is preserved.
+            </p>
+
+            <h2 class="mb-3 mt-5">Undo and redo</h2>
+            <p>
+              Unreal's built-in transaction system doesn't capture changes to external data structures, so the editor
+              has its own action system. The first version used captured lambdas, which needed shared pointers just to
+              keep objects alive. I replaced it with an interface that every action implements. Later I added a Road Net
+              Restorer, which snapshots the network before a change and restores it reliably even as the editing logic
+              evolves.
+            </p>
+            <figure class="re-figure">
+              <img src="diagram-action-system.png" alt="Action system UML diagram" class="img-fluid re-diagram">
+              <figcaption>The action system: every action implements its own undo and redo.</figcaption>
+            </figure>
+
+            <h2 class="mb-3 mt-5">Testing with real users</h2>
+            <p>
+              Each iteration was tested by AVES employees, some of whom use RoadRunner daily. They were asked to recreate
+              the road network of an area of their choice using only the Road Editor. The biggest finding was that
+              switching between separate select, move, add and delete tools broke their flow. In the second iteration I
+              merged them back into a single Planview tool that infers the action from what you hover, what's
+              selected and which modifier key you hold.
+            </p>
+            <div class="row align-items-end">
+              <figure class="re-figure col-6">
+                <img src="panel-before.png" alt="The Road Editor panel with four separate tools" class="img-fluid">
+                <figcaption>Before: four separate tools.</figcaption>
+              </figure>
+              <figure class="re-figure col-6">
+                <img src="panel-after.png" alt="The Road Editor panel with a single Planview tool" class="img-fluid">
+                <figcaption>After: one Planview tool.</figcaption>
+              </figure>
+            </div>
+
+            <h2 class="mb-3 mt-5">What I learned</h2>
+            <p>
+              This was the first time I had to find my way through codebases as large as Unreal Engine and AVES's own
+              projects, often with the source code as the only documentation. Working closely with a senior engineer
+              taught me a lot about architecture and code review. It also taught me to agree on coding conventions
+              early, after we had to spend a week refactoring to fix inconsistencies. The biggest lesson was about
+              premature optimization: build a solid architecture first, then optimize.
+            </p>
+
+            <div class="tag-widget post-tag-container mb-5 mt-5">
+              <div class="tagcloud">
+                <a class="tag-cloud-link">Unreal Engine</a>
+                <a class="tag-cloud-link">C++</a>
+                <a class="tag-cloud-link">Editor Tooling</a>
+                <a class="tag-cloud-link">ASAM OpenDRIVE</a>
+                <a class="tag-cloud-link">Digital Twins</a>
+              </div>
+            </div>
+
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Project Info</h3>
+              <ul class="categories">
+                <li>Company <span>AVES Reality</span></li>
+                <li>Year <span>2026</span></li>
+                <li>Engine <span>Unreal Engine 4.26 - 5.5</span></li>
+                <li>Language <span>C++</span></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Materials</h3>
+              <ul class="categories">
+                <li><a href="https://www.asam.net/standards/detail/opendrive/" target="_blank">ASAM OpenDRIVE</a></li>
+                <li><a href="https://dev.epicgames.com/documentation/unreal-engine/landscape-edit-layers-in-unreal-engine" target="_blank">Landscape Edit Layers</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Other Projects</h3>
+
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" href="../cmgt-engine/index.html" style="background-image: url(../cmgt-engine/CMGT-Engine.png)"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="../cmgt-engine/index.html">CMGT-Engine</a></h3>
+                </div>
+              </div>
+
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" href="../3d-rendering/index.html" style="background-image: url(../3d-rendering/3DRendering.png)"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="../3d-rendering/index.html">3D Rendering Course</a></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Social Media</h2>
+              <p>You can also follow me on social media for updates on projects I am currently working on.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.linkedin.com/in/dimitar-bosnev-aab4a926a/" target="_blank"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="../../index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="../../index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="../../index.html#background-section"><span class="icon-long-arrow-right mr-2"></span>Background</a></li>
+                <li><a href="../../index.html#skills-section"><span class="icon-long-arrow-right mr-2"></span>Skills</a></li>
+                <li><a href="../../index.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="../../index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><a href="https://www.google.com/maps/place/Sofia,+Bulgaria/" target="_blank"><span class="icon icon-map-marker"></span><span class="text">Sofia, Bulgaria</span></a></li>
+                  <li><a href="tel://359890136303"><span class="icon icon-phone"></span><span class="text">+359 890 136 303</span></a></li>
+                  <li><a href="mailto:dimitar.bosnew@gmail.com"><span class="icon icon-envelope"></span><span class="text">dimitar.bosnew@gmail.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="../../assets/js/jquery.min.js"></script>
+  <script src="../../assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../assets/js/popper.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/jquery.easing.1.3.js"></script>
+  <script src="../../assets/js/jquery.waypoints.min.js"></script>
+  <script src="../../assets/js/jquery.stellar.min.js"></script>
+  <script src="../../assets/js/owl.carousel.min.js"></script>
+  <script src="../../assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="../../assets/js/aos.js"></script>
+  <script src="../../assets/js/jquery.animateNumber.min.js"></script>
+  <script src="../../assets/js/scrollax.min.js"></script>
+
+  <script src="../../assets/js/main.js"></script>
+
+  </body>
+</html>
