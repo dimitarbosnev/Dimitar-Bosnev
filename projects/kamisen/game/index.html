@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Template: GXPEngine.Web.targets fills the {{...}} fields from the game's project. -->
   <title>Kamisen</title>
-  <meta name="description"
-    content="Kamisen, a two-player pixel-art fighting game, running in the browser with WebGPU and WebAssembly." />
-  <link rel="icon" type="image/png" href="assets/Character%20Art/player_1_icon.png" />
+  <meta name="description" content="A two-player pixel-art fighting game" />
+  <link rel="icon" href="content/Assets/Character%20Art/player_1_icon.png" />
   <style>
     :root {
       --panel: rgba(12, 12, 16, 0.86);
@@ -52,7 +52,7 @@
       overflow: auto;
       background:
         linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.8)),
-        url("assets/Background/starting_background.jpg") center / cover no-repeat,
+        var(--cover, none) center / cover no-repeat,
         #000;
       transition: opacity 0.25s;
     }
@@ -80,6 +80,11 @@
     .panel .tagline {
       margin: 4px 0 20px;
       color: var(--muted);
+    }
+
+    .panel .tagline:empty {
+      margin-bottom: 16px;
+      visibility: hidden;
     }
 
     .play {
@@ -300,52 +305,53 @@
 </head>
 
 <body>
-  <canvas id="gameCanvas" aria-label="Kamisen game"></canvas>
+  <canvas id="gameCanvas" aria-label="Game"></canvas>
 
-  <div class="overlay" id="startScreen">
+  <div class="overlay" id="startScreen" style="--cover: url('content/Assets/Background/starting_background.jpg')">
     <div class="panel">
       <h1>Kamisen</h1>
       <p class="tagline">A two-player pixel-art fighting game</p>
       <button class="play" id="playButton" type="button" disabled>Loading…</button>
       <p class="message" id="startMessage" hidden></p>
+      <!-- Shown on the start screen under the Play button (see GameControlsFile in GXPEngine.Web.targets). -->
+<table class="controls">
+  <caption>Two players share one keyboard</caption>
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Player 1</th>
+      <th scope="col">Player 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Move / jump / crouch</th>
+      <td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td>
+      <td><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></td>
+    </tr>
+    <tr>
+      <th scope="row">Light / heavy punch</th>
+      <td><kbd>Z</kbd> <kbd>X</kbd></td>
+      <td><kbd>H</kbd> <kbd>J</kbd></td>
+    </tr>
+    <tr>
+      <th scope="row">Light / heavy kick</th>
+      <td><kbd>C</kbd> <kbd>V</kbd></td>
+      <td><kbd>K</kbd> <kbd>L</kbd></td>
+    </tr>
+    <tr>
+      <th scope="row">Confirm in menus</th>
+      <td><kbd>C</kbd></td>
+      <td><kbd>K</kbd></td>
+    </tr>
+    <tr>
+      <th scope="row">Insert coin / pause</th>
+      <td colspan="2"><kbd>P</kbd></td>
+    </tr>
+  </tbody>
+</table>
+<p class="note">Hold back to block. Built in C# (GXPEngine), compiled to WebAssembly.</p>
 
-      <table class="controls">
-        <caption>Two players share one keyboard</caption>
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Player 1</th>
-            <th scope="col">Player 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Move / jump / crouch</th>
-            <td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td>
-            <td><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></td>
-          </tr>
-          <tr>
-            <th scope="row">Light / heavy punch</th>
-            <td><kbd>Z</kbd> <kbd>X</kbd></td>
-            <td><kbd>H</kbd> <kbd>J</kbd></td>
-          </tr>
-          <tr>
-            <th scope="row">Light / heavy kick</th>
-            <td><kbd>C</kbd> <kbd>V</kbd></td>
-            <td><kbd>K</kbd> <kbd>L</kbd></td>
-          </tr>
-          <tr>
-            <th scope="row">Confirm in menus</th>
-            <td><kbd>C</kbd></td>
-            <td><kbd>K</kbd></td>
-          </tr>
-          <tr>
-            <th scope="row">Insert coin / pause</th>
-            <td colspan="2"><kbd>P</kbd></td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">Hold back to block. Built in C# (GXPEngine), compiled to WebAssembly.</p>
     </div>
   </div>
 
@@ -363,7 +369,7 @@
         </svg>
       </button>
       <input type="range" id="volumeSlider" min="0" max="100" step="1" value="80" aria-label="Master volume" />
-      <output id="volumeValue" for="volumeSlider">30%</output>
+      <output id="volumeValue" for="volumeSlider">80%</output>
     </div>
     <button type="button" id="fullscreenButton" aria-label="Fullscreen" title="Fullscreen" hidden>
       <svg class="enter-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
