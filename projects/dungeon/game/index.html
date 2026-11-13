@@ -7,7 +7,7 @@
   <!-- Template: GXPEngine.Web.targets fills the {{...}} fields from the game's project. -->
   <title>Procedural Dungeon Generation</title>
   <meta name="description" content="" />
-  
+
   <style>
     :root {
       --panel: rgba(12, 12, 16, 0.86);
@@ -307,23 +307,41 @@
 <body>
   <canvas id="gameCanvas" aria-label="Game"></canvas>
 
-  <div class="overlay" id="startScreen">
+  <div class="overlay" id="startScreen" style="--cover: url('../Dungeon.png')">
     <div class="panel">
       <h1>Procedural Dungeon Generation</h1>
       <p class="tagline"></p>
       <button class="play" id="playButton" type="button" disabled>Loading…</button>
       <p class="message" id="startMessage" hidden></p>
       <table class="controls">
-  <caption>Controls</caption>
-  <tbody>
-    <tr><td><kbd>1</kbd> – <kbd>6</kbd></td><td>Switch path finding algorithm (BFS, Dijkstra, Greedy, Flood fill, A*, Recursive)</td></tr>
-    <tr><td>Left click a node</td><td>Walk the orc there, using the active algorithm</td></tr>
-    <tr><td><kbd>Shift</kbd> + left / right click</td><td>Set the start / end node</td></tr>
-    <tr><td><kbd>G</kbd> / <kbd>C</kbd></td><td>Generate / clear the path between them</td></tr>
-    <tr><td><kbd>L</kbd></td><td>Show node labels (travel cost)</td></tr>
-    <tr><td>Hold <kbd>Ctrl</kbd></td><td>Walk faster</td></tr>
-  </tbody>
-</table>
+        <caption>Controls</caption>
+        <tbody>
+          <tr>
+            <td><kbd>1</kbd> - <kbd>6</kbd></td>
+            <td>Switch path finding algorithm (BFS, Dijkstra, Greedy, Flood fill, A*, Recursive)</td>
+          </tr>
+          <tr>
+            <td>Left click a node</td>
+            <td>Walk the orc there, using the active algorithm</td>
+          </tr>
+          <tr>
+            <td><kbd>Shift</kbd> + left / right click</td>
+            <td>Set the start / end node</td>
+          </tr>
+          <tr>
+            <td><kbd>G</kbd> / <kbd>C</kbd></td>
+            <td>Generate / clear the path between them</td>
+          </tr>
+          <tr>
+            <td><kbd>L</kbd></td>
+            <td>Show node labels (travel cost)</td>
+          </tr>
+          <tr>
+            <td>Hold <kbd>Ctrl</kbd></td>
+            <td>Walk faster</td>
+          </tr>
+        </tbody>
+      </table>
 
     </div>
   </div>
