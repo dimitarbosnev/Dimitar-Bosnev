@@ -71,12 +71,17 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 ftco-animate">
-          <h2 class="mb-3">What is Networking?</h2>
           <p>
-            Networking is a course I took during the second year of my CMGT study.
-            In this course I had to complete 3 assignments from which I was able to learn about game networking, the
-            networking stack,
-            how to program sockets and how to write application protocols.
+            This project was part of my Networking Course during the second year of my CMGT study.
+            It centered on the practical application of networking fundamentals, including game networking, the
+            networking
+            stack, socket programming, and the design of custom application protocols.
+            Throughout the work I built on C#, Unity, TCP/UDP sockets, object serialization, and package-based
+            message delivery to develop progressively more robust and scalable systems.
+            The final assignment, expanded the earlier systems into a room-based
+            chat lobby where players could queue for games and seamlessly return to the main lobby upon completion.
+            The end-to-end experience gave me a strong, hands-on understanding of real-world networked architecture and
+            how individual components fit together to support reliable multiplayer communication.
           </p>
           <div class="tag-widget post-tag-container mb-5 mt-5">
             <div class="tagcloud">
@@ -87,10 +92,11 @@
           </div>
           <h2 class="mb-3">Assignment 1</h2>
           <p>
-            During this assignment I had to create a chat lobby which included a server and a client and client
-            interface.
-            In this assignment I was able to learn how to send data over sockets and how to retrive that data from a
-            stream.
+            In this assignment I built a chat lobby from the ground up, implementing a server alongside a client and
+            client interface using C# and Unity.
+            I focused on understanding how a TCP connection establishes and maintains a reliable channel between peers,
+            sending data over sockets and retrieving it from the incoming stream.
+            This gave me a solid foundation in the mechanics of networked communication and reliable data transfer.
           </p>
           <div class="about-author d-flex p-4 bg-dark">
             <div class="bio mr-5"></div>
@@ -109,11 +115,12 @@
           </p>
           <h2 class="mb-3">Assignment 2</h2>
           <p>
-            During this assignment I had to expand on the chat loby from the previous assignment and create a litte town
-            which would
-            have players being able to walk around and send message through their avatar. For this assignment
-            I had to learn how to serialize and deserialize objects and send the over in packages in order to create a
-            more rovust and scalable system.
+            Building on the previous assignment, I expanded the lobby into a small town where players could move their
+            avatars around and exchange messages through them.
+            The key challenge was moving beyond text, which required me to design a custom application protocol and learn
+            how to serialize and deserialize object state so that non-text data could be streamed across the network.
+            This experience deepened my understanding of reliable data transfer and how to build more robust and scalable
+            systems.
           </p>
           <div class="about-author d-flex p-4 bg-dark">
             <div class="bio mr-5"></div>
@@ -132,10 +139,12 @@
           </p>
           <h2 class="mb-3">Assignment 3</h2>
           <p>
-            During this assignment I had to create a chat lobby using the package system from the previous assignment
-            but also expand the server to use a room setup.
-            Since players in this assignment could now queue for a game and then be brought back to the main chat lobby
-            when finished.
+            For the assessed project, I expanded on the concepts from the earlier assignments and elevated the server to
+            act as the validator of the game logic.
+            Players could now queue for a game and, once finished, be brought back to the main chat lobby, requiring me to
+            manage complex server-side state and coordinate multiple players through different phases of play.
+            This culminated in a more complete and robust system that demonstrated how to orchestrate real multiplayer
+            sessions end-to-end.
           </p>
           <div class="about-author d-flex p-4 bg-dark">
             <div class="bio mr-5"></div>
