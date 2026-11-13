@@ -70,33 +70,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 ftco-animate">
-          <h2 class="mb-3">What is Magic Chess?</h2>
-          <p>Magic Chess is a variation of Chess or a 1 versus 1 player game where players take turns moving their
-            pieces in order to capture the opposing player’s King.</p>
-
-          <h2 class="mb-3">What is Magic Chess trying to achive?</h2>
-
-          <p>The vast accumulation of knowledge people have about Chess has reached a point where every possible move
-            has been analyzed either by a person or a computer.
-            This has led to a stagnation in innovation, making mastery reliant on memorizing an exhaustive set of moves.
-            Aspiring players find playing chess at a higher level unrewarding, as the game is predominantly played in a
-            repetitive and unvarying manner.</p>
-
-          <p>Magic Chess aims to disrupt the repetitive nature of traditional Chess, fostering an environment that
-            promotes player expression.
-            Magic Chess introduces dynamic elements for unpredictability, enhancing the overall gaming experience.
-            This innovative approach encourages players to showcase their creativity and strategic prowess, making each
-            move a unique expression of their style and adaptability.</p>
-
-          <h2 class="mb-3 mt-5">Design Choice</h2>
-
-          <p>When I was thinking about the feel of the game, I wanted to feel like the player was playing a chess game
-            from another magical world. This is why I decided to make the board from hexagons and the main theme to be a
-            forest elven theme. </p>
-
-          <p>Magic Chess's unique selling point is the magic moves pieces have. There are additional options that
-            players have to execute their tactics. My philosophy for balancing these moves is that they should aid the
-            player in winning but they shouldn’t result in a win directly.</p>
+          <p>Magic Chess began as a project for my game design course, and I wanted it to serve as a practical way to apply
+            what I had learned from my networking course while getting comfortable with the Godot engine.
+            Rather than play on the familiar square grid, I chose a hexagonal board and gave the pieces extra abilities, so
+            the geometry and the magic moves together turn each turn into a new decision.
+            Designing and balancing those magic moves was equally rewarding, because they had to make tactics richer without
+            ever winning a game on their own, which kept the core chess strategy at the heart of everything.
+            Working on the hexagonal grid and the custom piece movement was the biggest technical hurdle, since the rules
+            don't map onto a standard board and required careful coordination between position and movement logic.
+            Magic Chess started as a prototype in Godot, and I later rewrote much of the code to scale to every piece's
+            special moves before adding online multiplayer with a client-server architecture.
+            Building that multiplayer, especially the auto-pairing that starts matches instantly, taught me how to keep
+            game state in sync between two clients, and it pushed me to think about concurrency and reliability in ways a
+            single-player prototype never would have.</p>
 
           <div class="tag-widget post-tag-container mb-5 mt-5">
             <div class="tagcloud">
@@ -106,19 +92,6 @@
 
             </div>
           </div>
-
-          <h2 class="mb-3 mt-5">Development</h2>
-
-          <p>Magic Chess started as a prototype in Godot, built to test the core idea of a hexagonal board with pieces
-            that have magic moves.
-            From there I rewrote a large part of the code to accommodate all chess pieces and their special moves,
-            and added online multiplayer using a client-server architecture.
-            When running the game, the player is immediately paired with another player who is waiting to join a game.
-          </p>
-
-          <p>My goals for future iterations are adding UI, improving the player experience so players can first join a
-            chat lobby,
-            making the server authoritative and being able to play against bots.</p>
 
           <div class="about-author d-flex p-4 bg-dark">
             <div class="bio mr-5">
