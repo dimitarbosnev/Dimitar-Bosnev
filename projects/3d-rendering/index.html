@@ -71,12 +71,16 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 ftco-animate">
-          <h2 class="mb-3">What is 3D Rendering?</h2>
+                    <p>
+            This project marks the beginning of my journey into graphics programming. It started as a university course
+            where I learned the basics of rendering in 3D space using the OpenGL API. Working through a series of
+            assignments, I gradually took on more complex topics like lighting models, mesh manipulation, and triplanar
+            mapping.
+          </p>
           <p>
-            3D Rendering is a course I took during the second year of my CMGT study.
-            It was dedicated to teach us how rendering in 3D space is done using OpenGL.
-            During the course I had to complete 4 assignments which explored shaders,
-            game enigne architecture, rendering, lighing, mesh manipulation and texture blending.
+            What fascinated me most was seeing how much could be built from understanding the low-level details myself.
+            That curiosity inspired me to keep going in this direction, which eventually led me to build my own engine
+            from scratch—<a href="../cmgt-engine/index.html">CMGT-Engine</a>—now powered by the Vulkan API.
           </p>
 
           <div class="tag-widget post-tag-container mb-5 mt-5">
@@ -92,8 +96,9 @@
           <h2 class="mb-3">Assignment 1</h2>
 
           <p>
-            During this assignment I had to create a fragment shader
-            that displays a checker board pattern and applies a lighting effect based on my mouse position.
+            The first assignment introduced me to fragment shaders, and more importantly, to how I could control them
+            through shader uniforms. I created a shader that rendered a checkerboard pattern and applied a lighting
+            effect that responded to my mouse position, giving the scene a basic sense of depth and direction.
           </p>
 
           <div class="about-author d-flex p-4 bg-dark">
@@ -116,9 +121,10 @@
           <h2 class="mb-3">Assignment 2</h2>
 
           <p>
-            During this assignment I had to create a parent/child system in a micro game engine which was given by the
-            teachers for this course.
-            And implement a camera behaviour which rotates around a pre selected object.
+            For this assignment I built a parent/child system inside the small game engine we were given for the course,
+            and added a camera that orbits around a selected object. The most interesting part for me was having to
+            work out the math myself—applying concepts I had already learned in a previous course and seeing how they
+            fit together in practice.
           </p>
 
           <div class="about-author d-flex p-4 bg-dark">
@@ -141,9 +147,9 @@
           <h2 class="mb-3">Assignment 3</h2>
 
           <p>
-            During this assignment I had to create lighting effects. I was able to implement multiple lights model which
-            included
-            directional lights, point lights and phong specular light.
+            In this assignment I implemented a multi-light model that combined directional lights, point lights, and
+            Phong specular lighting. What I enjoyed most was the process itself—seeing the result update after each
+            implementation step, which let me isolate how each light type contributed to the final scene.
           </p>
 
           <div class="about-author d-flex p-4 bg-dark">
@@ -166,9 +172,10 @@
           <h2 class="mb-3">Assignment 4</h2>
 
           <p>
-            During this assignment I had to create a vertex shader which would extrude vertecies on a mesh based on a
-            hight map.
-            And a fragment shader for blending textures based on a splat map.
+            The final assignment pushed me toward texture work. I created a vertex shader that extruded the vertices of
+            a mesh based on a height map, paired with a fragment shader that blended textures using a splat map. What I
+            found most interesting was seeing how textures could be used in much broader ways than simply shading a
+            surface—they could actively reshape and define the geometry of what I was rendering.
           </p>
 
           <div class="about-author d-flex p-4 bg-dark">
